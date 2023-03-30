@@ -1,6 +1,90 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
+  /* display: flex; */
+  /* justify-content: center;
+  align-items: center;
+  padding: 1%; */
+  /* margin:auto;  */
+
+  
 }
+html{
+  height: 100vh;
+  background-image: linear-gradient( to right, rgb(40, 44, 52),#61dafb);
+}
+
+.SignUpBtn, .SignoutButton{
+  width: 10vw;
+  margin: 8px 0;
+  border: 1px solid #432c2c60;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: rgba(25, 27, 28, 0.28);
+  margin-right: 10px;
+}
+h1{ 
+  margin-left: 10px;
+}
+
+.TopBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 10vw;
+  margin-right: 10vw; 
+
+  background-color: rgba(39,32,30,0.22);
+}
+
+.MainBox{
+  margin-top: 10px;
+  align-items: center;
+  height: 100vh;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  background-color: rgba(39,32,30,0.11);
+  justify-content: center;
+}
+.Chats{
+  height: 95vh;
+  background-color: rgba(39,32,30,0.59);  
+}
+.messageBox{
+  height: 5vh;
+  background-color: solid gray;
+  
+}
+input[type="text"] {
+  /* margin-left: 10vw; */
+  /* margin-right: 10vw;  */
+  width: 80%;
+  text-align: left;
+}
+/* input[type="submit"] */
+
+.Chats{
+  color: rgb(237, 246, 255);
+  font-size: 17px;
+  padding: 4px;
+}
+
+.Message{
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-top: 4px;
+  /* margin-bottom: 4px; */
+  padding-left: 6px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-right: 6px;
+  /* text-align: justify; */
+  
+  width:fit-content;
+  /* white-space: 10px; */
+  background-color: rgba(90, 111, 118, 0.3);
+}
+
+
 
 .App-logo {
   height: 40vmin;
