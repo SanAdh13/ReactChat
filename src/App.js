@@ -2,10 +2,11 @@
 /* eslint-disable no-const-assign */
 import { useState} from 'react';
 import {onAuthStateChanged,signInWithPopup,GoogleAuthProvider, signOut} from 'firebase/auth'
-import { auth,db } from './firebaseConf';
+import { auth } from './firebaseConf';
 
 import "./App.css"
 import Chat from './components/Chat';
+import SendMessage from './components/SendMessage';
 
 function App() {
   const[user,setUser] = useState({});
@@ -52,8 +53,7 @@ function App() {
           </div>
           <div className='MainBox'>
               <div className='Chats'> 
-                {user ?( <Chat />) : null}
-              
+                {user ?( <> <Chat /> <SendMessage /> </>) : null}
               </div>
 
               {/* <div className='messageBox'>
