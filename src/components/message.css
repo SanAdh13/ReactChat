@@ -1,0 +1,60 @@
+/* https://codepen.io/kristinak/pen/bXqayB */
+.Message{
+    /* padding: 10px 10px; */
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: column;
+      align-self: flex-end;
+      color: #fff;
+  }
+  
+  .inlineContainer {
+    display: inline-flex;
+  }
+  .inlineContainer.own {
+    flex-direction: row-reverse;
+  }
+  
+  .ownBubble {
+      min-width: 60px;
+      max-width: 700px;
+      padding: 14px 18px;
+    margin: 6px 8px;
+      background-color: #5b5377;
+      border-radius: 16px 16px 0 16px;
+      border: 1px solid #443f56;
+   
+  }
+  .otherBubble {
+      min-width: 60px;
+      max-width: 700px;
+      padding: 14px 18px;
+    margin: 6px 8px;
+      background-color: #6C8EA4;
+      border-radius: 16px 16px 16px 0;
+      border: 1px solid #54788e;
+    
+  }
+  .own {
+      align-self: flex-end;
+  }
+  .other {
+      align-self: flex-start;
+  }
+  
+
+  [data-initials]:before {
+    background: #062a3a;
+    color: white;
+    opacity: 1; 
+    content: attr(data-initials); 
+    display: inline-block; 
+    font-weight: bold; 
+    border-radius: 50%; 
+    vertical-align: middle; 
+    margin-right: 0.5em; 
+    width: 50px; 
+    height: 50px; 
+    line-height: 50px; 
+    text-align: center; 
+    }

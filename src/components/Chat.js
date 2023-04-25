@@ -11,7 +11,7 @@ const Chat = () => {
         const unsub = onSnapshot(q,(querySnapshot)=>{
             let messages = [];
             querySnapshot.forEach((doc)=>{
-                messages.push({...doc.data(),id:doc.id});
+                messages.push({...doc.data(),id:doc.uid});
             })
             setMessages(messages)
         });

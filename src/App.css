@@ -1,122 +1,116 @@
-.App {
-  /* text-align: center; */
-  /* display: flex; */
-  /* justify-content: center;
-  align-items: center;
-  padding: 1%; */
-  /* margin:auto;  */
-
-  
-}
-html{
-  height: 100vh;
-  background-image: linear-gradient( to right, rgb(40, 44, 52),#61dafb);
+:root{
+  --chat-bg :rgba(10, 14, 14, 0.92);
+  --chat-text-color: #a3a3a3
 }
 
-.SignUpBtn, .SignoutButton{
-  width: 10vw;
-  margin: 8px 0;
-  border: 1px solid #432c2c60;
-  border-radius: 4px;
-  box-sizing: border-box;
-  background-color: rgba(25, 27, 28, 0.28);
-  margin-right: 10px;
+body {
+  color: rgb(244, 229, 202);
+  background: url(./img/mountain.jpg) fixed;
+  background-size: cover ;
+  margin: 0;
+  width: 100%;
+  height: 100%;
 }
+
+/* The top bar with the signout/signin button */
+#google {
+  background-color: transparent; 
+  border: 0px solid #432c2c60;
+  scale: 0.77;
+  padding-right: 0px;
+}
+
+.SignoutButton, .signoutSVG{
+    /* position: relative; */
+    min-width: 63px;
+    /* width: 23px; */
+    height: 53px;
+    background: transparent;
+    border-radius: 50%;
+    border-color: transparent;
+    top: 50%;
+    left: 50%;
+    
+}
+.signoutSVG{
+  fill: transparent;
+  stroke: rgb(231, 9, 9);
+}
+
+
 h1{ 
   margin-left: 10px;
+}
+
+.TopBar , .SignoutButton{
+  height: 100%;
 }
 
 .TopBar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-left: 10vw;
-  margin-right: 10vw; 
+  height: 100%;
+  /* border-bottom: 5px solid white; */
+  margin-bottom: 12px;
 
-  background-color: rgba(39,32,30,0.22);
 }
+
+
+/* The main chatbox */
+/* https://codepen.io/abadu/pen/pGLrMQ */
 
 .MainBox{
-  margin-top: 10px;
-  align-items: center;
-  height: 100vh;
-  margin-left: 10vw;
-  margin-right: 10vw;
-  background-color: rgba(39,32,30,0.11);
-  justify-content: center;
+
+  background: var(--chat-bg) ;
+  /* justify-content: center;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+   */
+
+  box-sizing: border-box;
+  margin: 25px auto;
+  border-radius: 12px;
+  padding: 1em;
+  max-width: 80%;
+  position: relative;
+  overflow: hidden;
 }
 .Chats{
-  height: 95vh;
-  background-color: rgba(39,32,30,0.59);  
+  overflow: hidden;
+  overflow-y: scroll;
+  height: calc(100vh - 55px - 2em - 25px * 2 - .5em - 3em);
+  
+
 }
 .messageBox{
-  height: 5vh;
-  background-color: solid gray;
+  background-color: #131719;
+  border-radius: 12px;
+  padding: 0 1em;
+  height: 55px;
+  margin: 0.5em 0 0;
   
 }
-input[type="text"] {
-  /* margin-left: 10vw; */
-  /* margin-right: 10vw;  */
-  width: 80%;
-  text-align: left;
-}
-/* input[type="submit"] */
 
-.Chats{
-  color: rgb(237, 246, 255);
-  font-size: 17px;
-  padding: 4px;
-}
-
-.Message{
-  border-radius: 10px;
-  margin-left: 10px;
-  margin-top: 4px;
-  /* margin-bottom: 4px; */
-  padding-left: 6px;
-  padding-top: 1px;
-  padding-bottom: 1px;
-  padding-right: 6px;
-  /* text-align: justify; */
-  
-  width:fit-content;
-  /* white-space: 10px; */
-  background-color: rgba(90, 111, 118, 0.3);
-}
-
-
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.messageBoxContainer{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+
+input[type="text"] {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  position: relative;
+  color: var(--chat-text-color);
+  font-size: 15px;
+  background: transparent;
+  border: 0;
+  font-family: "Lato", sans-serif;
+  resize: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
